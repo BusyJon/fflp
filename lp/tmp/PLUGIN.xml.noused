@@ -1,0 +1,19 @@
+<plugin_list dir="./plugin">
+    <!--//模板
+    <plugin name="" point="register_"></plugin>
+    <plugin name="libeth.so" point="register_eth"></plugin>
+    <plugin name="libip.so" point="register_ip"></plugin>
+    <plugin name="libudp.so" point="register_udp"></plugin>
+    <plugin name="libtcp.so" point="register_tcp"></plugin>
+    <plugin name="libhttp.so" point="registe_http"></plugin>
+    -->
+    
+    <!-- ip --> 
+    <plugin name="pptp.so" entry="ip" point="register_pptp">将关于pptp的解压缩和密码窃听都放在这里</plugin>
+    <plugin name="ids.so" entry="ip" point="register_snort">移植snort的基于入侵检测功能</plugin>
+    <!-- tcp -->
+    <plugin name="killtcp.so" entry="tcp" point="register_killtcp">killtcp</plugin>
+    <!-- udp -->
+     
+
+</plugin_list>

@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+GRE	main.c	30;"	d	file:
+GRE_HEADER_LEN	main.c	28;"	d	file:
+PPP_HEADER_LEN	main.c	29;"	d	file:
+TCP	main.c	31;"	d	file:
+UDP	main.c	32;"	d	file:
+disect_pptp	main.c	/^int disect_pptp();$/;"	p	file:
+http_decode	main.c	/^inline int http_decode(char * data, int datalen, http_info_t *hi)$/;"	f	signature:(char * data, int datalen, http_info_t *hi)
+inc	makefile	/^inc:=-I..\/..\/Util -I..\/..\/lp$/;"	m
+init_pptp	main.c	/^void init_pptp();$/;"	p	file:
+init_pptp	main.c	/^void init_pptp(){$/;"	f
+plugin_pptp	main.c	/^plugin_t plugin_pptp();$/;"	p	file:
+plugin_pptp	main.c	/^plugin_t plugin_pptp(){$/;"	f
+plugindir	makefile	/^plugindir:=..\/..\/lp\/plugin$/;"	m
+pptp_watch	main.c	/^int pptp_watch(struct ip_header *iph, int len){$/;"	f	signature:(struct ip_header *iph, int len)

@@ -1,0 +1,107 @@
+
+#include "stdlib.h"
+#include "stdio.h"
+#include "pppoe_print.h"
+
+
+static void lp_dissect_pppoed(const unsigned char* pkt, int length);
+static void lp_dissect_pppoe(const unsigned char* pkt, int length);
+
+/*
+ * 被pppoe协议的协议打印函数调用
+ */
+static const char* lp_pppoe_code_str(const unsigned char c);
+
+static dissect_t lp_identify_from_pppoe(const unsigned char *code);
+
+
+static void lp_print_pppoed_header();
+static void lp_print_pppoe_header();
+
+
+proto_op_t lp_identify_from_pppoe(const unsigned char *code){
+	return lp_default_op;
+}
+
+static void lp_print_eth_header(const unsigned char* pkt, int length){
+	int i = 0;
+	printf("Ethernet II\n");
+	//打印src_eth_mac
+	printf("\tsrc_eth: (");
+	for (; i < 5; i++)
+		printf("%s:", charToHexstr(pkt[i]));
+	printf("%s)\n", charToHexstr(pkt[i++]));
+
+	//打印dest_eth_mac
+	printf("\tdest_eth: (");
+	for (; i < 11; i++)
+		printf("%s:", charToHexstr(pkt[i]));
+	printf("%s)\n", charToHexstr(pkt[i++]));
+
+	//打印以太帧协议类型
+	printf("\tprotocol: %s", charToHexstr(pkt[i++]));
+	printf("%s\n", charToHexstr(pkt[i++]));
+}
+
+
+/*
+ * pppoe的code表示的是报文的类型
+ */
+static const char* lp_pppoe_code_str(const unsigned char code){
+	const char *codestr=NULL;
+	switch(code){
+	case PPPoE_PADI:
+		codestr="active discovery initiation";
+		break;
+	case PPPoE_PADO:
+		codestr="active discovery offer";
+		break;
+	case PPPoE_PADR:
+		codestr="active discovery request";
+		break;
+	case PPPoE_PADS:
+		codestr="active discovery session-confirmation";
+		break;
+	case PPPoE_PADT:
+		codestr="active discovery session-over";
+		break;
+	case PPPoE_SESSION:
+		codestr="sessiion data";
+		break;
+	default:
+		codestr="###warning: no such pppoe message-type";
+		break;
+	}
+	return codestr;
+}
+
+
+static void lp_pppoed_op(const unsigned char* pkt, int length) {
+	proto_op_t proto_op;
+	int i=0;
+	printf("PPPoED\n");
+	printf("\tversion: %d\n",(pkt[i]>>4));
+	printf("\ttype: %d\n",(pkt[i++]&0x0f));
+	printf("\tcode: %s\n",lp_pppoe_code_str(pkt[i++]));
+	printf("\tsession id: 0x%s%s\n",charToHexstr(pkt[i++]),charToHexstr(pkt[i++]));
+	printf("\tpayload length: %d\n",pkt[i]);
+	//打印PPPoE Tags
+	return;
+}
+
+
+
+
+static void lp_pppoe_op(const unsigned char* pkt, int length) {
+	proto_op_t proto_op;
+	int i=0;
+	printf("PPPoES\n");
+	printf("\tversion: %d\n",(pkt[i]>>4));
+	printf("\ttype: %d\n",(pkt[i++]&0x0f));
+	printf("\tcode :Session Data\n");
+	printf("\tsession id: 0x%s%s\n",charToHexstr(pkt[i++]),charToHexstr(pkt[i++]));
+	printf("\tpayload length: %d\n",pkt[i]);
+	return;
+}
+
+

@@ -1,0 +1,18 @@
+#插件接口描述
+#基本libnids的回调函数一样，区别在于有int型的返回值
+#这是为以后插件之间的交互通信预留的
+#每个插件的协议处理函数执行后返回一个返回值
+#下一个插件会根据这个返回值来决定自己的行为
+#其交互机制和**PAM**的认证模块的机制类似
+
+#ip入口的第一个参数是ip头部+ip数据
+ip entry:   int xxx(struct ip_header *iphdr, int len)
+#tcp入口的第二个参数是tcp的负载部分
+tcp entry:  int xxx(struct tcp_stream *a_tcp, void *data)
+#udp入口的第二个参数是udp的负载部分
+udp entry:  int xxx(struct tuple4 *addr, char *data, int len, struct ip_header *iphdr)
+
+#template文件给出了一个模板,开发时只需要将其复制即可
+#并根据个人需要开发的插件的入口来选择入口
+#开发测试时将插件信息写入到PLUGIN.conf中，才会被调用
+#具体可以看udpwatch，httpwatch实例来测试开发

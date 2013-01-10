@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+GRE	pptp_mppc.c	15;"	d	file:
+HASH	mppc/mppcc.c	46;"	d	file:
+MPPC_Compress	mppc/mppc.h	/^int MPPC_Compress(u_char **src, u_char **dst, u_long *srcCnt,$/;"	p	signature:(u_char **src, u_char **dst, u_long *srcCnt, u_long *dstCnt, char *history, int flags, int undef)
+MPPC_Compress	mppc/mppcc.c	/^int MPPC_Compress(u_char **src, u_char **dst, u_long *srcCnt, u_long *dstCnt,$/;"	f	signature:(u_char **src, u_char **dst, u_long *srcCnt, u_long *dstCnt, char *history, int flags, int undef)
+MPPC_DEST_EXHAUSTED	mppc/mppc.h	54;"	d
+MPPC_Decompress	mppc/mppc.h	/^int MPPC_Decompress(u_char **src, u_char **dst, u_long *srcCnt,$/;"	p	signature:(u_char **src, u_char **dst, u_long *srcCnt, u_long *dstCnt, char *history, int flags)
+MPPC_Decompress	mppc/mppcd.c	/^int MPPC_Decompress(u_char **src, u_char **dst, u_long *srcCnt, u_long *dstCnt, char *history, int flags) {$/;"	f	signature:(u_char **src, u_char **dst, u_long *srcCnt, u_long *dstCnt, char *history, int flags)
+MPPC_EXPANDED	mppc/mppc.h	52;"	d
+MPPC_InitCompressionHistory	mppc/mppc.h	/^void MPPC_InitCompressionHistory(char *history);$/;"	p	signature:(char *history)
+MPPC_InitCompressionHistory	mppc/mppcc.c	/^void MPPC_InitCompressionHistory(char *history) {$/;"	f	signature:(char *history)
+MPPC_InitDecompressionHistory	mppc/mppc.h	/^void MPPC_InitDecompressionHistory(char *history);$/;"	p	signature:(char *history)
+MPPC_InitDecompressionHistory	mppc/mppcd.c	/^void MPPC_InitDecompressionHistory(char *history) {$/;"	f	signature:(char *history)
+MPPC_MANDATORY_COMPRESS_FLAGS	mppc/mppc.h	46;"	d
+MPPC_MANDATORY_DECOMPRESS_FLAGS	mppc/mppc.h	47;"	d
+MPPC_OK	mppc/mppc.h	51;"	d
+MPPC_RESTART_HISTORY	mppc/mppc.h	53;"	d
+MPPC_SAVE_HISTORY	mppc/mppc.h	49;"	d
+MPPC_SizeOfCompressionHistory	mppc/mppc.h	/^size_t MPPC_SizeOfCompressionHistory(void);$/;"	p	signature:(void)
+MPPC_SizeOfCompressionHistory	mppc/mppcc.c	/^size_t MPPC_SizeOfCompressionHistory(void) {$/;"	f	signature:(void)
+MPPC_SizeOfDecompressionHistory	mppc/mppc.h	/^size_t MPPC_SizeOfDecompressionHistory(void);$/;"	p	signature:(void)
+MPPC_SizeOfDecompressionHistory	mppc/mppcd.c	/^size_t MPPC_SizeOfDecompressionHistory(void)$/;"	f	signature:(void)
+MPPC_comp_state	mppc/mppc.h	/^struct MPPC_comp_state {$/;"	s
+MPPC_comp_state::hash	mppc/mppc.h	/^	uint16_t hash[MPPE_HIST_LEN];$/;"	m	struct:MPPC_comp_state	access:public
+MPPC_comp_state::hist	mppc/mppc.h	/^	uint8_t hist[2 * MPPE_HIST_LEN];$/;"	m	struct:MPPC_comp_state	access:public
+MPPC_comp_state::histptr	mppc/mppc.h	/^	uint16_t histptr;$/;"	m	struct:MPPC_comp_state	access:public
+MPPC_decomp_state	mppc/mppc.h	/^struct MPPC_decomp_state {$/;"	s
+MPPC_decomp_state::hist	mppc/mppc.h	/^    uint8_t	hist[2*MPPE_HIST_LEN];$/;"	m	struct:MPPC_decomp_state	access:public
+MPPC_decomp_state::histptr	mppc/mppc.h	/^    uint16_t	histptr;$/;"	m	struct:MPPC_decomp_state	access:public
+MPPE_HIST_LEN	mppc/mppc.h	56;"	d
+PRINT_H_	print.h	9;"	d
+_GNU_SOURCE	pptp_mppc.c	1;"	d	file:
+_MPPCDECODE_H_	mppcdecode.h	2;"	d
+_NET_MPPC_H_	mppc/mppc.h	44;"	d
+disect_pptp_mppc	pptp_mppc.c	/^int disect_pptp_mppc();$/;"	p	file:
+find_ip_in_mppcd	mppcdecode.c	/^int find_ip_in_mppcd(u_char **buf,u_long *buflen){$/;"	f	signature:(u_char **buf,u_long *buflen)
+find_ip_in_mppcd	mppcdecode.h	/^int find_ip_in_mppcd(u_char **buf,u_long *buflen);$/;"	p	signature:(u_char **buf,u_long *buflen)
+getbits	mppc/mppcd.c	/^getbits(const uint8_t *buf, const uint32_t n, uint32_t *i, uint32_t *l)$/;"	f	file:	signature:(const uint8_t *buf, const uint32_t n, uint32_t *i, uint32_t *l)
+getbyte	mppc/mppcd.c	/^getbyte(const uint8_t *buf, const uint32_t i, const uint32_t l)$/;"	f	file:	signature:(const uint8_t *buf, const uint32_t i, const uint32_t l)
+hash	mppc/mppc.h	/^	uint16_t hash[MPPE_HIST_LEN];$/;"	m	struct:MPPC_comp_state	access:public
+hexchars	print.c	/^static const char *hexchars = "0123456789ABCDEF";$/;"	v	file:
+hist	mppc/mppc.h	/^	uint8_t hist[2 * MPPE_HIST_LEN];$/;"	m	struct:MPPC_comp_state	access:public
+hist	mppc/mppc.h	/^    uint8_t	hist[2*MPPE_HIST_LEN];$/;"	m	struct:MPPC_decomp_state	access:public
+histptr	mppc/mppc.h	/^	uint16_t histptr;$/;"	m	struct:MPPC_comp_state	access:public
+histptr	mppc/mppc.h	/^    uint16_t	histptr;$/;"	m	struct:MPPC_decomp_state	access:public
+inc	makefile	/^inc:=-I..\/..\/Util -I..\/..\/lp$/;"	m
+init_pptp_mppc	pptp_mppc.c	/^void init_pptp_mppc();$/;"	p	file:
+init_pptp_mppc	pptp_mppc.c	/^void init_pptp_mppc(){}$/;"	f
+lamecopy	mppc/mppcd.c	/^lamecopy(uint8_t *dst, uint8_t *src, uint32_t len)$/;"	f	file:	signature:(uint8_t *dst, uint8_t *src, uint32_t len)
+mppc_comp_one	mppcdecode.c	/^int mppc_comp_one(u_char *src, u_long srclen, u_char *buf, u_long *buflen){$/;"	f	signature:(u_char *src, u_long srclen, u_char *buf, u_long *buflen)
+mppc_comp_one	mppcdecode.h	/^int mppc_comp_one(u_char *src, u_long srclen, u_char *buf, u_long *buflen);$/;"	p	signature:(u_char *src, u_long srclen, u_char *buf, u_long *buflen)
+mppc_uncomp_one	mppcdecode.c	/^int mppc_uncomp_one(u_char *src,u_long srclen, u_char *buf, u_long *buflen) {$/;"	f	signature:(u_char *src,u_long srclen, u_char *buf, u_long *buflen)
+mppc_uncomp_one	mppcdecode.h	/^int mppc_uncomp_one(u_char *src,u_long srclen, u_char *buf, u_long *buflen);$/;"	p	signature:(u_char *src,u_long srclen, u_char *buf, u_long *buflen)
+mppcd_ppp_data	mppcdecode.c	/^void mppcd_ppp_data(u_char *ppp_data, u_long data_len, u_char *buf, u_long *buflen) {$/;"	f	signature:(u_char *ppp_data, u_long data_len, u_char *buf, u_long *buflen)
+mppcd_ppp_data	mppcdecode.h	/^void mppcd_ppp_data(u_char *ppp_data, u_long data_len, u_char *buf, u_long *buflen);$/;"	p	signature:(u_char *ppp_data, u_long data_len, u_char *buf, u_long *buflen)
+plugin_pptp_mppc	pptp_mppc.c	/^plugin_t plugin_pptp_mppc();$/;"	p	file:
+plugin_pptp_mppc	pptp_mppc.c	/^plugin_t plugin_pptp_mppc(){$/;"	f
+plugindir	makefile	/^plugindir:=..\/..\/lp\/plugin$/;"	m
+pptp_mppc	pptp_mppc.c	/^int pptp_mppc(struct ip_header *iph, int len){$/;"	f	signature:(struct ip_header *iph, int len)
+print_data	print.c	/^void print_data(const unsigned char *data,int length,int bytes_per_line) {$/;"	f	signature:(const unsigned char *data,int length,int bytes_per_line)
+print_data	print.h	/^void print_data(const unsigned char *data,int length,int bytes_per_line);$/;"	p	signature:(const unsigned char *data,int length,int bytes_per_line)
+print_hex	print.c	/^void print_hex(const u_char *c) {$/;"	f	signature:(const u_char *c)
+print_hex	print.h	/^void print_hex(const u_char *c);$/;"	p	signature:(const u_char *c)
+print_hexs	print.c	/^void print_hexs(const u_char *str,int byte_num){$/;"	f	signature:(const u_char *str,int byte_num)
+print_hexs	print.h	/^void print_hexs(const u_char *str,int byte_num);$/;"	p	signature:(const u_char *str,int byte_num)
+print_printable	print.c	/^void print_printable(char c) {$/;"	f	signature:(char c)
+print_printable	print.h	/^void print_printable(char c);$/;"	p	signature:(char c)
+printf_space_per_8bytes	print.c	/^void printf_space_per_8bytes(int i) {$/;"	f	signature:(int i)
+printf_space_per_8bytes	print.h	/^void printf_space_per_8bytes(int i);$/;"	p	signature:(int i)
+putbits16	mppc/mppcc.c	/^static void __inline putbits16(uint8_t *buf, uint32_t val, const uint32_t n,$/;"	f	file:	signature:(uint8_t *buf, uint32_t val, const uint32_t n, uint32_t *i, uint32_t *l)
+putbits24	mppc/mppcc.c	/^static void __inline putbits24(uint8_t *buf, uint32_t val, const uint32_t n,$/;"	f	file:	signature:(uint8_t *buf, uint32_t val, const uint32_t n, uint32_t *i, uint32_t *l)
+putbits8	mppc/mppcc.c	/^static void __inline putbits8(uint8_t *buf, uint32_t val, const uint32_t n,$/;"	f	file:	signature:(uint8_t *buf, uint32_t val, const uint32_t n, uint32_t *i, uint32_t *l)
+srcs	makefile	/^srcs:=pptp_mppc.c mppcdecode.c print.c mppc\/mppcd.c mppc\/mppcc.c $/;"	m

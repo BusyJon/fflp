@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAX_URL_LEN	main.c	25;"	d	file:
+disect_http	main.c	/^int disect_http();$/;"	p	file:
+disect_http	main.c	/^int disect_http(struct tcp_stream *a_tcp, void **ai){$/;"	f	signature:(struct tcp_stream *a_tcp, void **ai)
+get	main.c	/^int head,get,post;$/;"	v
+head	main.c	/^int head,get,post;$/;"	v
+inc	makefile	/^inc:=-I..\/..\/lp -I..\/..\/Util$/;"	m
+init_http	main.c	/^void init_http();$/;"	p	file:
+init_http	main.c	/^void init_http(){$/;"	f
+plugin_http	main.c	/^plugin_t plugin_http();$/;"	p	file:
+plugin_http	main.c	/^plugin_t plugin_http(){$/;"	f
+plugindir	makefile	/^plugindir:=..\/..\/lp\/plugin$/;"	m
+post	main.c	/^int head,get,post;$/;"	v
+resp	main.c	/^int resp;$/;"	v
+url	main.c	/^char url[MAX_URL_LEN];$/;"	v

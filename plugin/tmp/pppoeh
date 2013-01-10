@@ -1,0 +1,17 @@
+#ifndef PPPOE_PRINT_H_
+#define PPPOE_PRINT_H_
+
+
+
+
+
+//PPPoE协议中code字段
+#define PPPoE_PADI 0x09
+#define PPPoE_PADO 0x07
+#define PPPoE_PADR 0x19
+#define PPPoE_PADS 0x65
+#define PPPoE_PADT 0x7a
+#define PPPoE_SESSION 0x00
+
+
+#endif
